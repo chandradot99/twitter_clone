@@ -1,0 +1,29 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand href="/" Twitter
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          a href="#" Explore
+
+      ul.nav.navbar-nav.navbar-right
+        form.navbar-form.navbar-right role="search" 
+          .form-group
+            input.form-control placeholder="Search" type="text"
+          button.btn.btn-default type="submit"  Submit
+        li.dropdown
+          a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
+            | Navigation
+          ul.dropdown-menu 
+            li
+              a href="#" Help
+            li.divider role="separator" 
+            li= link_to "Sign Up", new_user_registration_path
+            li.divider role="separator" 
+            li= link_to "Sign In", new_user_session_path

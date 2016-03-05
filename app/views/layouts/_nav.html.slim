@@ -1,41 +1,4 @@
-nav.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      button.navbar-toggle.collapsed aria-expanded="false" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button" 
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand href="/" Twitter
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        li
-          a href="/home" Home
-        li
-          a href="#" Explore
-
-      ul.nav.navbar-nav.navbar-right
-        li
-          a href="#" Tweet
-        form.navbar-form.navbar-right role="search" 
-          .form-group
-            input.form-control placeholder="Search" type="text"
-          button.btn.btn-default type="submit"  Submit
-        li.dropdown
-          a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
-            | Dropdown
-            span.caret
-          ul.dropdown-menu
-            li
-              a href="/profile" Profile
-            li.divider role="separator" 
-
-            li
-              a href="#" Help
-            li.divider role="separator" 
-
-            li
-              a href="#" Settings
-            li.divider role="separator" 
-            li
-              a href="#" Log Out
+- if !user_signed_in?
+  = render '/layouts/nav_guest'
+- else
+  = render '/layouts/nav_user'
