@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim', '~> 3.0', '>= 3.0.6'
 gem 'slim-rails', '~> 3.0', '>= 3.0.1'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 group :development, :test do
   gem 'byebug'
