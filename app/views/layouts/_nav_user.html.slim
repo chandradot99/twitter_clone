@@ -23,10 +23,11 @@ nav.navbar.navbar-default
           button.btn.btn-default type="submit"  Submit
         li.dropdown
           a.dropdown-toggle aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button" 
-            = current_user.email
+            = current_user.username
+            span.caret
           ul.dropdown-menu
             li
-              a href="/profile" Profile
+              a href="/user/#{current_user.username}" Profile
             li.divider role="separator" 
             li
               a href="#" Help
