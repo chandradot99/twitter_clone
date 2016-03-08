@@ -1,2 +1,4 @@
-h1 Pages#explore
-p Find me in app/views/pages/explore.html.slim
+- @posts.each do |post|
+  .panel.panel-default
+    .panel-body
+      = post.content

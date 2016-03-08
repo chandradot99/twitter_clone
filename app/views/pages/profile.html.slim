@@ -9,15 +9,17 @@
       .panel-body
         p profile
   .col-xs-6
-    .panel.panel-default
-      .panel-body
-        p tweets
+    = render '/posts/post'
+    - @posts.each do |post|
+      .panel.panel-default
+        .panel-body
+          = post.content
+
   .col-xs-3
     .panel.panel-default
       .panel-body
         p who to follow
-.row
-  .col-xs-3.col-xs-offset-9
     .panel.panel-default
       .panel-body
         p trends
+
